@@ -31,7 +31,6 @@ defmodule NucleotideCount do
   @spec histogram(charlist()) :: map()
   def histogram(strand) do
 
-
     histog = strand
     |> Enum.reduce(%{}, fn char, acc ->
      Map.put(acc, char, (acc[char] || 0) + 1)
